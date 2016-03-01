@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <title>Weather App</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css">
+    
     <link href='https://fonts.googleapis.com/css?family=Lato:400,900,300|Unica+One' rel='stylesheet' type='text/css'>
+
+    
+    
 </head>
 
 <body>
     <div id='container'>
-    <header>
-        <h1>Weather App</h1>
-        <h2>By Cerita</h2>
-    </header>
 
     <div id='weather'>
+        <div id='weatherIcon'></div>
+        
+        <p id='temp' class='units'> </p>
         <p id='location'> </p>
-        <p id='temp'> </p>
         <p id='conditions'> </p>
     </div>
 

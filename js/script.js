@@ -1,4 +1,6 @@
 $( document ).ready(function() {
+    var $conditionIcon = $('#weatherIcon');
+    var $tempDisplay = $('#temp');
     
     
     if (navigator.geolocation) {
@@ -16,12 +18,29 @@ $( document ).ready(function() {
                 location = response.current_observation.display_location.full;
                 $('#location').text(location);
                 
+                $tempDisplay.click(function() {
+                    $tempDisplay.toggleClass('units');
+                    if($tempDisplay.hasClass('units')) {
+                        var weatherF = response.current_observation.temp_f;
+                        $tempDisplay.text(weatherF + '\xB0 F');
+                    } else {
+                        var weatherC = response.current_observation.temp_c;
+                        $tempDisplay.text(weatherC + '\xB0 C');
+                    }
+                });
                 var weatherF = response.current_observation.temp_f;
-                $('#temp').text(weatherF + '\xB0 F');
+                $tempDisplay.text(weatherF + '\xB0 F');
                 
                 var condition = response.current_observation.weather;
                 $('#conditions').text(condition);
-            }
+                
+                var conditionIcon = response.current_observation.icon;
+                
+                var wuIcon = 'wi wi-wu-' + conditionIcon;
+                console.log(wuIcon);
+                $("#weatherIcon").append('<i class="' + wuIcon + '"></li>');
+                        
+                }
           });
           
       });
@@ -29,7 +48,11 @@ $( document ).ready(function() {
       $("#location").html("Location is not available");
     }
 
+      //background
+  var bgUrl = 'url("http://placehold.it/300x300")';
+  
     
+  
       
 });
 
