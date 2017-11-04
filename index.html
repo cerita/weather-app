@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css">
-    
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,900,300|Unica+One' rel='stylesheet' type='text/css'>
 
-    
-    
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,900,300|Unica+One' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css">
+
+
 </head>
 
 <body>
-    <div id='container'>
-
-    <div id='weather'>
-        <div id='weatherIcon'></div>
-        
-        <p id='temp' class='units'> </p>
-        <p id='location'> </p>
-        <p id='conditions'> </p>
+  <div id="app-container">
+    <div id="weather-location"></div>
+    <div id="weather-icon"></div>
+    <div id="weather-display">
+      <span id="weather-temp"></span>
+      <span id="weather-units"></span>
     </div>
+    <div id="weather-conditions"></div>
+  </div>
 
-    </div>
-    
-    
-    
-    <script src="js/libs/jquery.min.js"></script>
-    <script src="js/script.js"></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
